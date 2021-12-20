@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A1A5FDF-6F22-43DA-83DB-3802E8276BAE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AntiqueShop</RootNamespace>
+    <AssemblyName>AntiqueShop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.2.5, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.5\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=6.0.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.6.0.1\lib\netstandard2.0\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.6.0.0\lib\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.0\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Channels.6.0.0\lib\net461\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DGVprinter.cs" />
+    <Compile Include="kitaplar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kitaplar.Designer.cs">
+      <DependentUpon>kitaplar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mobilya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mobilya.Designer.cs">
+      <DependentUpon>mobilya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="resim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="resim.Designer.cs">
+      <DependentUpon>resim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mucevher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mucevher.Designer.cs">
+      <DependentUpon>mucevher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="musteriGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="musteriGiris.Designer.cs">
+      <DependentUpon>musteriGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="musteriKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="musteriKayit.Designer.cs">
+      <DependentUpon>musteriKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="saat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="saat.Designer.cs">
+      <DependentUpon>saat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="saticiGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="saticiGiris.Designer.cs">
+      <DependentUpon>saticiGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="saticiKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="saticiKayit.Designer.cs">
+      <DependentUpon>saticiKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellerForm.Designer.cs">
+      <DependentUpon>SellerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sepet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sepet.Designer.cs">
+      <DependentUpon>sepet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sikke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sikke.Designer.cs">
+      <DependentUpon>sikke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="urunAraMusteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="urunAraMusteri.Designer.cs">
+      <DependentUpon>urunAraMusteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="urunAraSatici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="urunAraSatici.Designer.cs">
+      <DependentUpon>urunAraSatici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="urunEkleSatici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="urunEkleSatici.Designer.cs">
+      <DependentUpon>urunEkleSatici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="urunGuncel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="urunGuncel.Designer.cs">
+      <DependentUpon>urunGuncel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="urunListesiSatici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="urunListesiSatici.Designer.cs">
+      <DependentUpon>urunListesiSatici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="urunSilSatici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="urunSilSatici.Designer.cs">
+      <DependentUpon>urunSilSatici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vinylPlaka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vinylPlaka.Designer.cs">
+      <DependentUpon>vinylPlaka.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kitaplar.resx">
+      <DependentUpon>kitaplar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mobilya.resx">
+      <DependentUpon>mobilya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resim.resx">
+      <DependentUpon>resim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mucevher.resx">
+      <DependentUpon>mucevher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="musteriGiris.resx">
+      <DependentUpon>musteriGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="musteriKayit.resx">
+      <DependentUpon>musteriKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="saat.resx">
+      <DependentUpon>saat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="saticiGiris.resx">
+      <DependentUpon>saticiGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="saticiKayit.resx">
+      <DependentUpon>saticiKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellerForm.resx">
+      <DependentUpon>SellerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sepet.resx">
+      <DependentUpon>sepet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sikke.resx">
+      <DependentUpon>sikke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="urunAraMusteri.resx">
+      <DependentUpon>urunAraMusteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="urunAraSatici.resx">
+      <DependentUpon>urunAraSatici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="urunEkleSatici.resx">
+      <DependentUpon>urunEkleSatici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="urunGuncel.resx">
+      <DependentUpon>urunGuncel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="urunListesiSatici.resx">
+      <DependentUpon>urunListesiSatici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="urunSilSatici.resx">
+      <DependentUpon>urunSilSatici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vinylPlaka.resx">
+      <DependentUpon>vinylPlaka.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets'))" />
+  </Target>
+</Project>
