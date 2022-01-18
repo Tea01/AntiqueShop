@@ -1,2 +1,2 @@
-# VTYS Projesi - Antique Shop
- Antika e-ticaret sistemidir
+# DBMS Project - Antique Shop
+ Antika e-commerce system. By using pgAdmin4 and C#.
